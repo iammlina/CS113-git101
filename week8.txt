@@ -1,0 +1,38 @@
+go to Drive D: --> d:
+enter --> cd name
+back --> cd ..
+สร้าง Folder --> mkdir name
+all list --> dir
+- ดูเวอร์ชั่น
+	git --version
+- สร้าง .git
+	git init
+- เช็คสถานะไฟล์
+	git status
+- แอดไฟล์
+	git add name.นามสกุล
+- ตั้งค่าชื่อและอีเมลเพื่อระบุตัวผู้ commit
+	git config user.name "Your Name"
+	git config user.email "yourmail@ku.th"
+- ถ้าเป็นเครื่องส่วนตัว ให้ใส่ option --global (global) ด้วย
+	git config --global user.name "Your Name"
+	git config --global user.email "yourmail@ku.th"
+- commit and เพิ่มข้อความ
+	git commit -m "......."
+- ดู Checkpoint ทั้งหมด
+	git log --all --decorate --oneline --graph
+	ดู  commit id (เลขฐานสิบหก) 7 ตัวแรก เป็นหมายเลขอ้างอิง Checkpoint
+- github
+	-  new repository กดบวกใกล้ๆรูป พอสร้างก็กำหนดชื่อและ Public & Private
+- เชื่อม local repository กับ github
+	git remote add <ชื่อ remote เช่น origin> <git url>
+- ส่งไฟล์ไป github
+	git push (-u origin master)
+- นำ Checkpoint กลับมาทำงาน
+	กลับมาทั้งหมด	git checkout <commit-id>
+	กลับมาบางไฟล์	git checkout <commit-id>  <ชื่อไฟล์>
+- ลบไฟล์
+	$ git rm --cached name
+	$ git commit --amend -CHEAD
+	$ git push
+	
